@@ -1,0 +1,20 @@
+---
+layout: default
+title: Dhruv Vyas
+image: headers/desk.jpg
+color: 880706
+---
+
+<section class="date">
+  <p>
+    <span>Home</span>
+  </p>
+</section>
+
+<h1>Blog posts</h1>
+
+<ul class="posts">
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
